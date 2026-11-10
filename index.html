@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sra. Muchanga | Tudo ao preço da loja</title>
+<meta name="description" content="Vestidos, conjuntos e calças com preços em MZN. Escolha a peça e encomende pelo WhatsApp.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--teal:#0F5E63;--pink:#E4185F;--blush:#FFF1F5;--ink:#14292B;--mute:#5B6B6D;--line:#E6D9DD;--wa:#1B9E4F;--bg:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#10191A;--blush:#1A2527;--ink:#F1F5F5;--mute:#A9B8BA;--line:#2C3C3E;--teal:#4FB3BA}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+.strip{background:var(--pink);color:#fff;text-align:center;font-size:.9rem;padding:8px 12px}
+.strip a{font-weight:700}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:64px}
+.nav img{width:46px;height:46px;border-radius:50%}
+.nav nav{margin-left:auto;display:flex;gap:20px;font-weight:500}
+.nav nav a{text-decoration:none}
+.nav nav a:hover{color:var(--pink)}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 22px;font:700 .95rem Figtree,sans-serif;text-decoration:none;cursor:pointer;text-align:center}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-line{border:2px solid var(--teal);color:var(--teal);background:none}
+.btn-wa:hover{filter:brightness(1.08)}
+.hero{background:var(--blush);padding:46px 0 56px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.9rem);color:var(--teal)}
+.hero h1 em{font-style:italic;color:var(--pink)}
+.hero p{max-width:46ch;margin:16px 0 24px;font-size:1.08rem;color:var(--mute)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.arches{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:start}
+.arches img{width:100%;aspect-ratio:3/5;object-fit:cover;border-radius:999px 999px 14px 14px}
+.arches img:nth-child(2){margin-top:34px}
+section{padding:56px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.3rem);color:var(--teal);margin-bottom:8px}
+.sub{color:var(--mute);margin-bottom:22px;max-width:60ch}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{border:1.5px solid var(--line);background:none;color:var(--ink);border-radius:999px;padding:8px 18px;font:500 .95rem Figtree,sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 12px}
+@media (min-width:720px){.grid{grid-template-columns:repeat(3,1fr);gap:24px 18px}}
+@media (min-width:1020px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column}
+.ph{position:relative;border-radius:14px;overflow:hidden;background:var(--blush);aspect-ratio:3/4}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.tag{position:absolute;top:8px;left:8px;background:var(--pink);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.dots{display:flex;gap:6px;margin:8px 0 2px}
+.dots button{width:34px;height:34px;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:none}
+.dots button[aria-current=true]{border-color:var(--pink)}
+.dots img{width:100%;height:100%;object-fit:cover;display:block}
+.card h3{font-size:1.02rem;margin:8px 0 4px;font-weight:500}
+.price{font-weight:700;font-size:1.15rem;color:var(--pink)}
+.sizes{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.sizes button{min-width:38px;height:32px;border:1.5px solid var(--line);background:none;color:var(--ink);border-radius:8px;font:500 .82rem Figtree,sans-serif;cursor:pointer}
+.sizes button[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:#fff}
+.card .btn{margin-top:auto;padding:10px 12px;font-size:.9rem}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;background:var(--blush);border-radius:14px;padding:22px}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;margin-bottom:12px}
+.steps b{display:block;font-family:Fraunces,serif;font-size:1.15rem;margin-bottom:4px}
+footer{background:var(--teal);color:#fff;padding:44px 0 90px}
+@media (prefers-color-scheme:dark){footer{background:#0B3F43}}
+footer .wrap{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+footer img{width:110px;height:110px;border-radius:50%}
+footer h2{color:#fff;font-size:1.5rem}
+footer p{margin:4px 0}
+footer a{font-weight:700}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+@media (max-width:720px){
+ .hero .wrap{grid-template-columns:1fr}
+ .nav nav a:not(.btn){display:none}
+ .nav nav{margin-left:auto}
+ footer .wrap{grid-template-columns:1fr;text-align:center;justify-items:center}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="strip">Estamos no mês da Black Friday. <a href="#" data-wa="Olá, Sra. Muchanga! Quero saber das ofertas da Black Friday.">Pergunte pelas ofertas</a></div>
+<header>
+ <div class="wrap nav">
+  <a href="#topo" aria-label="Sra. Muchanga, início"><img src="img/logo.png" alt="Logótipo Sra. Muchanga"></a>
+  <nav>
+   <a href="#catalogo">Catálogo</a>
+   <a href="#encomendar">Como encomendar</a>
+   <a href="#contacto">Contacto</a>
+   <a class="btn btn-wa" href="#" data-wa="Olá, Sra. Muchanga! Gostava de ver as peças disponíveis.">WhatsApp</a>
+  </nav>
+ </div>
+</header>
+
+<main id="topo">
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <h1>Tudo ao preço da loja com a <em>Sra. Muchanga</em></h1>
+   <p>Vestidos, conjuntos e calças com tamanhos até ao 3XL. Veja os preços em meticais e encomende pelo WhatsApp.</p>
+   <div class="cta">
+    <a class="btn btn-wa" href="#catalogo">Ver catálogo</a>
+    <a class="btn btn-line" href="#" data-wa="Olá, Sra. Muchanga! Gostava de ver as peças disponíveis.">Falar no WhatsApp</a>
+   </div>
+  </div>
+  <div class="arches">
+   <img src="img/p02-1.jpg" alt="Conjunto plissado estampado">
+   <img src="img/p03-2.jpg" alt="Vestido longo azul de alças">
+   <img src="img/p04-1.jpg" alt="Conjunto verde de camisa e calça">
+  </div>
+ </div>
+</div>
+
+<section id="catalogo">
+ <div class="wrap">
+  <h2>Catálogo</h2>
+  <p class="sub">Escolha o tamanho e toque em "Encomendar". A mensagem segue já escrita para o WhatsApp da loja.</p>
+  <div class="filters" id="filters" role="group" aria-label="Filtrar por categoria"></div>
+  <div class="grid" id="grid"></div>
+ </div>
+</section>
+
+<section id="encomendar" style="background:var(--bg);padding-top:0">
+ <div class="wrap">
+  <h2>Como encomendar</h2>
+  <p class="sub">Sem registo e sem carrinho. A conversa decide-se no WhatsApp.</p>
+  <ol class="steps">
+   <li><b>Escolha a peça</b>Seleccione a cor nas miniaturas e o tamanho.</li>
+   <li><b>Envie a mensagem</b>O botão abre o WhatsApp com o nome da peça, o tamanho e o preço.</li>
+   <li><b>Combine pagamento e entrega</b>A Sra. Muchanga responde e confirma a disponibilidade.</li>
+  </ol>
+ </div>
+</section>
+</main>
+
+<footer id="contacto">
+ <div class="wrap">
+  <img src="img/logo.png" alt="Logótipo Sra. Muchanga">
+  <div>
+   <h2>Fale connosco</h2>
+   <p>WhatsApp: <a href="#" data-wa="Olá, Sra. Muchanga!">+258 87 051 0096</a></p>
+   <p>Facebook e Instagram: Maria Betânia</p>
+   <p>Tudo ao preço da loja com a Sra. Muchanga.</p>
+  </div>
+ </div>
+</footer>
+<a class="btn btn-wa fab" href="#" data-wa="Olá, Sra. Muchanga! Gostava de ver as peças disponíveis.">WhatsApp</a>
+
+<script>
+const NUM="258870510096";
+const S=(a)=>a.split(",");
+const P=[
+ {n:"Vestido abotoado de mangas bufantes",c:"Vestidos",p:1035,s:S("S,M,L,XL,2XL,3XL"),t:"Reposição",i:3,pre:"p01",alt:"cores rosa, azul e preto"},
+ {n:"Conjunto plissado estampado",c:"Conjuntos",p:1125,s:S("S,M,L,XL"),t:"Novidade",i:2,pre:"p02"},
+ {n:"Vestido longo de alças",c:"Vestidos",p:945,s:S("M,L,XL,2XL,3XL"),t:"Novidade",i:4,pre:"p03",order:[2,3,1,4]},
+ {n:"Conjunto de camisa e calça",c:"Conjuntos",p:900,s:S("S,M,L,XL,2XL"),t:"Reposição",i:5,pre:"p04"},
+ {n:"Calça cargo de ganga",c:"Calças",p:1350,s:S("28,30,32,34,36,38"),t:"Reposição",i:2,pre:"p05"},
+ {n:"Conjunto de duas peças com calça à boca de sino",c:"Conjuntos",p:675,s:S("M,L,XL,2XL,3XL"),i:1,pre:"p06"},
+ {n:"Vestido de chiffon sem mangas",c:"Vestidos",p:495,s:S("S,M,L,XL,2XL,3XL"),i:1,pre:"p07"},
+ {n:"Vestido de cetim com alças brilhantes",c:"Vestidos",p:1125,i:2,pre:"p08"},
+ {n:"Conjunto de top atado e calça larga",c:"Conjuntos",p:810,s:S("S,M,L,XL"),t:"Novidade",i:4,pre:"p09"},
+ {n:"Conjunto de camisa e saia",c:"Conjuntos",p:630,s:S("S,M,L,XL,2XL"),t:"Preço especial",i:4,pre:"p10"},
+ {n:"Vestidos curtos de alças",c:"Vestidos",p:810,i:1,pre:"p11"},
+ {n:"Vestido rosa plissado e conjunto castanho",c:"Vestidos",p:1170,i:1,pre:"p12"},
+ {n:"Vestido de ganga abotoado e vestido vermelho",c:"Vestidos",p:1035,i:1,pre:"p13"},
+ {n:"Vestido de cetim e conjunto floral",c:"Vestidos",p:900,i:1,pre:"p14"},
+ {n:"Conjunto de crochê",c:"Conjuntos",p:1035,i:1,pre:"p15"},
+ {n:"Vestido curto de ganga",c:"Vestidos",p:1125,i:1,pre:"p16"}
+];
+const fmt=v=>String(v).replace(/\B(?=(\d{3})+(?!\d))/g,"\u00A0");
+const wa=m=>"https://wa.me/"+NUM+"?text="+encodeURIComponent(m);
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=wa(a.dataset.wa);a.target="_blank";a.rel="noopener"});
+
+const grid=document.getElementById("grid"),fil=document.getElementById("filters");
+let cat="Tudo";
+function card(x){
+ const imgs=(x.order||Array.from({length:x.i},(_,k)=>k+1)).map(k=>`img/${x.pre}-${k}.jpg`);
+ let cur=0,size="";
+ const el=document.createElement("article");el.className="card";
+ el.innerHTML=`<div class="ph"><img src="${imgs[0]}" alt="${x.n}" loading="lazy">${x.t?`<span class="tag">${x.t}</span>`:""}</div>
+ ${imgs.length>1?`<div class="dots" role="group" aria-label="Cores e fotografias"></div>`:""}
+ <h3>${x.n}</h3><div class="price">${fmt(x.p)} MZN</div>
+ ${x.s?`<div class="sizes" role="group" aria-label="Tamanhos"></div>`:""}
+ <a class="btn btn-wa" target="_blank" rel="noopener">Encomendar no WhatsApp</a>`;
+ const main=el.querySelector(".ph img"),btn=el.querySelector(".btn");
+ const upd=()=>{btn.href=wa(`Olá, Sra. Muchanga! Quero encomendar: ${x.n}${size?`, tamanho ${size}`:""}, preço ${fmt(x.p)} MZN.`)};
+ upd();
+ const d=el.querySelector(".dots");
+ if(d)imgs.forEach((src,k)=>{const b=document.createElement("button");b.setAttribute("aria-label","Fotografia "+(k+1));if(!k)b.setAttribute("aria-current","true");b.innerHTML=`<img src="${src}" alt="" loading="lazy">`;b.onclick=()=>{main.src=src;d.querySelectorAll("button").forEach(z=>z.removeAttribute("aria-current"));b.setAttribute("aria-current","true")};d.appendChild(b)});
+ const sz=el.querySelector(".sizes");
+ if(sz)x.s.forEach(v=>{const b=document.createElement("button");b.textContent=v;b.setAttribute("aria-pressed","false");b.onclick=()=>{size=size===v?"":v;sz.querySelectorAll("button").forEach(z=>z.setAttribute("aria-pressed",z.textContent===size));upd()};sz.appendChild(b)});
+ return el;
+}
+function draw(){grid.replaceChildren(...P.filter(x=>cat==="Tudo"||x.c===cat).map(card))}
+["Tudo","Vestidos","Conjuntos","Calças"].forEach(c=>{const b=document.createElement("button");b.textContent=c;b.setAttribute("aria-pressed",c===cat);b.onclick=()=>{cat=c;fil.querySelectorAll("button").forEach(z=>z.setAttribute("aria-pressed",z.textContent===c));draw()};fil.appendChild(b)});
+draw();
+</script>
+</body>
+</html>
